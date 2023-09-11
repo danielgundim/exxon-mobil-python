@@ -28,4 +28,5 @@ valor_multiplicador = int(input("Digite o valor multiplicador: "))
 for interador in range (valor_inicial,valor_final+1):
     print("Interador: ", interador, "x", valor_multiplicador, "=", interador * valor_multiplicador)
     
-# While(Enqunto):
+
+# While
