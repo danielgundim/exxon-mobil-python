@@ -1,5 +1,7 @@
 def menu_cliente():
   validador_menu = True
+  lista_cliente = []
+  
   while validador_menu:
     print("Menu Cliente"
       "\n 1 - Cadastrar Cliente"
@@ -10,7 +12,15 @@ def menu_cliente():
       "\n 6 - Voltar ao menu anterior")
     opcao = int(input("Digite a opção desejada do menu cliente: "))
     if opcao == 1:
-      print("Cliente. Problema resolvido")
+      cliente_dicionario = {
+        "Nome": input("Digite o Nome: "),
+        "CPF": input("Digite o CPF: "),
+        "RG": input("Digite o RG: "),
+        "Nascimento": input("Digite a Data de Nascimento: "),
+        "CEP": input("Digite o CEP: "),
+        "Numero": input("Digite o Número da casa: ")
+      }
+      lista_cliente.append(cliente_dicionario)
     elif opcao == 2:
       pass
     elif opcao == 3:
@@ -18,7 +28,7 @@ def menu_cliente():
     elif opcao == 4:
       pass
     elif opcao == 5:
-      pass
+      print(lista_cliente)
     elif opcao == 6:
       print("Encerrando a execução do programa.")
       validador_menu = False
