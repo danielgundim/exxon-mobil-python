@@ -1,6 +1,6 @@
 
 
-from utils import valida_cpf, valida_data_nascimento, valida_rg
+from utils import *
 
 
 def menu_cliente():
@@ -21,8 +21,8 @@ def menu_cliente():
         "Nome": input("Digite o Nome: "),
         "CPF": valida_cpf(input("Digite o CPF: ")),
         "RG": valida_rg(input("Digite o RG: ")),
-        "Nascimento": valida_data_nascimento(input("Digite a Data de Nascimento: ")),
-        "CEP": input("Digite o CEP: "),
+        "Nascimento": valida_data_nascimento(),
+        "Endereco": buscar_cep(input("Digite o CEP: ")),
         "Numero": input("Digite o Número da casa: ")
       }
       lista_cliente.append(cliente_dicionario)
